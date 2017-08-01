@@ -1,0 +1,7 @@
+secret.csv
+public.csv
+build/
+out/
+.idea/
+logs/
+.gradle/
