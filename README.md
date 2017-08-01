@@ -2,7 +2,6 @@
 
 During the ICO of modum.io, each potential investor gets assigned a unique Ethereum and Bitcoin address after signup.
 This allows to easily map any investments back to the user.
-W
 
 Address generation works by creating a new ECDSA keypair. 
 The address can be derived from the public key.
