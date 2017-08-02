@@ -31,9 +31,9 @@ public class Main {
     CSVPrinter printerPublicList = new CSVPrinter(new FileWriter(new File("public.csv")),
         CSVFormat.DEFAULT.withHeader("btcPublic", "ethPublic"));
 
-    for (int i=0; i < noOfKeys; i++) {
+    for (long i=0; i < noOfKeys; i++) {
       // Print progress
-      if (i % 1_000 == 0) System.out.println(String.format("%s%%", (double)Math.round((i*1000/noOfKeys)) / 10));
+      if (i % 10_000 == 0) System.out.println(String.format("%s%%", (double)Math.round((i*1000/noOfKeys)) / 10));
 
       // Generate keys
       org.bitcoinj.core.ECKey bitcoinKey = new org.bitcoinj.core.ECKey();
