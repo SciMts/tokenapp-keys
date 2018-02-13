@@ -56,7 +56,7 @@ public class Main {
     long difference = System.nanoTime() - startTime;
     System.out.println("Total execution time: " +
         String.format("%d min, %d sec",
-            TimeUnit.NANOSECONDS.toHours(difference),
+            TimeUnit.NANOSECONDS.toMinutes(difference),
             TimeUnit.NANOSECONDS.toSeconds(difference) -
                 TimeUnit.MINUTES.toSeconds(TimeUnit.NANOSECONDS.toMinutes(difference))));
   }
