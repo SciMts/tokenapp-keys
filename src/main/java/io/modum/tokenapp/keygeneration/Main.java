@@ -29,7 +29,7 @@ public class Main {
     CSVPrinter printerSecretList = new CSVPrinter(new FileWriter(new File("secret.csv")),
         CSVFormat.DEFAULT.withHeader("btcPrivate", "btcPublic", "ethPrivate", "ethPublic"));
     CSVPrinter printerPublicList = new CSVPrinter(new FileWriter(new File("public.csv")),
-        CSVFormat.DEFAULT.withHeader("btcPublic", "ethPublic"));
+        CSVFormat.DEFAULT.withHeader("id", "btcPublic", "ethPublic"));
 
     for (long i=0; i < noOfKeys; i++) {
       // Print progress
@@ -46,7 +46,7 @@ public class Main {
 
       // Print to CSV
       printerSecretList.printRecord(btcPrivate, btcPublic, ethPrivate, ethPublic);
-      printerPublicList.printRecord(btcPublic, ethPublic);
+      printerPublicList.printRecord(i, btcPublic, ethPublic);
     }
 
     printerSecretList.close();
