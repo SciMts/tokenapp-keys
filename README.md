@@ -1,3 +1,15 @@
+# ScienceMatters Fork
+
+Added a script for importing the data into the SQL database. Can be used with `psql -f`.
+
+(Not recommended) Added the functionality to convert the private key CSV into SQL. After the creation, run this from the root of the directory:
+
+```
+node create-sql.js
+```
+
+---
+
 # Token Sale Key Generation
 
 During the token sale of modum.io, each potential investor gets assigned a unique Ethereum and Bitcoin address after signup.
